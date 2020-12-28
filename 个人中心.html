@@ -54,6 +54,7 @@
     </script>
     <script src="./JS/total.js"></script>
     <script src="./JS/diary.js"></script>
+    <script src="./JS/publish.js"></script>
 </head>
 
 <html>
@@ -200,14 +201,16 @@
                 </form>
                 <table class="talk_list" id="talk_list">
                     <tr class="talk">
-                        <td id="talk" style="height: 10px;">
-                            <span class="title">四叶花颖</span>
-                            <span class="time">2021/12/25 11:29:00</span>
-                            <span class="icon-uniE900" onclick="concel(this)"></span>
-                            <P class="talk_con">今天天气很明媚！</P>
-                            <a><span class="icon-uniE9001" onclick="Leave_Message(this)"></span></a>
-                            <hr>
-                            <input id="leaveMess" disabled="disabled" value="" placeholder = "留下你的感受吧">
+                        <td class="dairy" id="talk" style="height: 10px;">
+                            <script id="diary" type="text/html">
+                                <span class="title">{{title}}</span>
+                                <span class="time">{{time}}</span>
+                                <span class="icon-uniE900" onclick="concel(this)"></span>
+                                <P class="talk_con">{{content}}</P>
+                                <a><span class="icon-uniE9001" onclick="Leave_Message(this)"></span></a>
+                                <hr>
+                                <input id="leaveMess" disabled="disabled" value="" placeholder = "留下你的感受吧">
+                            </script>
                         </td>
                     </tr>
                 </table>
@@ -270,11 +273,11 @@
                                 <p>{{p13}}</p>
                                 <br>
                                 <img class="thumbs-up" onclick="thumbs_up()" src="./CSS/icon/点赞.png">
-                            </script>    
-                <script src="./JS/publish.js"></script>
+                            </script> 
                         </td>
                     </tr>
-                </table>
+                </table>   
+                <script src="./JS/read_template.js"></script>
             </div>
             <style>
                 .column_3 {
