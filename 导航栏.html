@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<head>
+    <title>My UF</title>
+    <style type="text/css">
+        @import url("./CSS/normalize.css");
+        @import url("./CSS/css/960.css");
+
+        body {
+            background-image: none;
+            background-color: deepskyblue;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            align-content: center;
+        }
+
+        ul {
+            margin-top: 0px;
+        }
+
+        li {
+            display: inline;
+            list-style-type: none;
+        }
+
+        li a {
+            text-decoration: none;
+            padding: 17px 18px;
+            /*链接文字可以占的空间大小*/
+        }
+
+        li a:hover {
+            background-color: lightblue;
+            color: lightgray;
+        }
+        
+        #head_text {
+            color: ghostwhite;
+            font-size: larger;
+            font-weight: 150;
+            vertical-align: middle;
+        }
+
+        .logo {
+            vertical-align: middle;
+        }
+
+        .icon {
+            width: 15px;
+            height: 17px;
+            vertical-align: middle;
+        }
+
+        .bgm {
+            display: inline-block;
+            position: relative;
+        }
+
+        #bgm_css {
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+            animation: rotate 9.5s linear 0s infinite normal none;
+            -webkit-animation: rotate 9.5s linear 0s infinite normal none;
+            animation-play-state: paused;
+        }
+    </style>
+    <script type="text/javascript" src="./JS/total.js"></script>
+</head>
+
+<html>
+
+<body class="flexBox">
+    <ul>
+        <li>
+            <img class="logo" src="./CSS/image/logo_Img/uf.jpg" style="width: 2em;height: 2em; border-radius: 100%;">
+            <span style="color: ghostwhite; font-size: 2em; font-weight: 300; vertical-align: middle;"><abbr
+                    title="Your Future 未来的你" style="text-decoration: none;">UF</abbr>空间</span>
+        </li>
+        <li><a href="个人中心.html" target="showframe"><img class="icon" src="./CSS/icon/个人.png"><span
+                    id="head_text">个人中心</span></a></li>
+        <li><a href="我的主页.html" target="showframe"><img class="icon" src="./CSS/icon/首页.png"><span
+                    id="head_text">我的主页</span></a></li>
+        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </li>
+        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </li>
+        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </li>
+        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </li>
+        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </li>
+        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </li>
+        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </li>
+        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </li>
+        <li class="bgm"><img id="bgm_css" src="./CSS/icon/五线谱_bg.png" onclick="musicShow()"></li>
+        <li><div id="box" style="font-size: small; vertical-align: bottom; opacity: 0.7;">↖点击</div></li>
+        
+        <li>
+            <button onclick="OUT(this)"  style="background-color:lightskyblue; border: 1px solid black; border-radius: 5px; vertical-align: bottom;">登出</button>
+        </li>
+        <li><span style="width: 20em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </li>
+    </ul>
+</body>
+
+</html>

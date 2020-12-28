@@ -1,0 +1,87 @@
+.list { display: none; color: black }
+.show { display: none; color: black; padding: 3px; background-color: cornflowerblue; border: 1px solid cornflowerblue;}
+.hide { color: black; }
+#hide_1:target { display:none; }
+#hide_1:target + #show_1 { display: inline; }
+#hide_1:target ~ #list_1 { display:inline; }
+#hide_2:target { display:none; }
+#hide_2:target + #show_2 { display: inline; }
+#hide_2:target ~ #list_2 { display:inline; }
+@media print { .hide, .show { display: none; } }
+
+.menu {
+    overflow: hidden;
+    height: 0px;
+    transition: all 0.3s ease;
+}
+
+.menu_title {
+    width: 126px;
+    height: 50px;
+    line-height: 50px;
+    background: #fafafa;
+    color: gray;
+    font-size: 20px;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.menu_title:hover {
+    background: #dedede;
+    color: black;
+}
+
+.indicator {
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    position: absolute;
+    margin-left: 73px;
+    top: 3px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.item {
+    width: 126px;
+    height: 40px;
+    line-height: 40px;
+    background: gray;
+    color: white;
+    padding-left: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer; /*光标形状*/
+}
+
+.item:hover {
+    background: #B22222;
+}
+
+.item a {
+    width: 126px;
+    height: 40px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+}
+
+.item_divider {
+    width: 134px;
+    height: 1px;
+    background: white;
+    display: block;
+    opacity: 0.8;
+}
+
+.menu_divider {
+    width: 134px;
+    height: 1px;
+    background: gray;
+}

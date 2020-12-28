@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?bnwd01');
+  src:  url('fonts/icomoon.eot?bnwd01#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?bnwd01') format('truetype'),
+    url('fonts/icomoon.woff?bnwd01') format('woff'),
+    url('fonts/icomoon.svg?bnwd01#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-uniE900:before {
+  content: "\e900";
+  color: #a3a5ad;
+}
+.icon-uniE9001:before {
+  content: "\e901";
+  color: #7dc5eb;
+}
+
+.icon-uniE900 {
+  font-size: small;
+  vertical-align: middle;
+  margin-left: 66%;
+}
+.icon-uniE900:hover {
+  font-size: medium;
+  vertical-align: middle;
+  margin-left: 66%;
+}
+
+.icon-uniE9001 {
+  font-size: xx-large;
+  vertical-align: middle;
+}

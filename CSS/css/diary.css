@@ -1,0 +1,58 @@
+.css_button {
+    width: 50px;
+    height: 20px;
+    background-color:deepskyblue; 
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black; 
+    border-radius: 5px;
+}
+
+#talk_Form {
+    background-color: white;
+}
+
+.talk_list {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.talk {
+    background-color: white;
+    width: 82%;
+    height: auto;
+}
+
+.talk a {
+    font-family: 'icomoon';
+    text-decoration: none;
+    padding-top: 4px;
+    padding-bottom: 10px;
+    margin-left: 95%;
+}
+
+.talk a:hover {
+    background-color: lightcyan;
+}
+
+.title {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.time {
+    vertical-align: baseline;
+    margin-left: 10px;
+}
+
+.talk_con {
+    text-indent: 2em;
+}
+
+#leaveMess {
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 0px 1000px white inset !important;
+}

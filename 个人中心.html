@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<head>
+    <title>My UF</title>
+    <script src="./JS/template.js"></script>
+    <style type="text/css">
+        @import url("./CSS/normalize.css");
+        @import url("./CSS/css/960.css");
+        @import url("./CSS/icon/icomoon/style.css");
+        @import url("./CSS/css/total.css");
+        @import url("./CSS/css/menu.css");
+        @import url("./CSS/css/diary.css");
+        #term_1 {
+            float: left;
+            display: none;
+        }
+
+        .column_3 {
+            width: 100%;
+            height: 100%;
+            margin-left: 10px;
+            float: right;
+            display: none;
+        }
+    </style>
+    <script>       
+        function diaryShow() {
+            document.getElementById("SHOW_1").style.display = "flex";
+            document.getElementById("SHOW_2").style.display = "none";
+            document.getElementById("SHOW_3").style.display = "none";
+            document.getElementById("menu_title1").style.display = "none";
+            document.getElementById("menu_title2").style.display = "none";
+            document.getElementById("menu_title3").style.display = "none";
+            var driver =  document.getElementsByClassName("menu_divider");
+            var i;
+            for(i=0; i<driver.length; i++) {
+                driver[i].style.display = "none";
+            }
+            var menu =  document.getElementsByClassName("menu");
+            var i;
+            for(i=0; i<menu.length; i++) {
+                menu[i].style.display = "none";
+            }
+            document.getElementById("project_1").style.display = "none";
+            document.getElementById("project_2").style.display = "none";
+            document.getElementById("project_3").style.display = "none";
+            document.getElementById("term_1").style.display = "flex";
+            var column =  document.getElementsByClassName("column_2");
+            var i;
+            for(i=0; i<column.length; i++) {
+                column[i].style.display = "inline";
+            }
+        }
+    </script>
+    <script src="./JS/total.js"></script>
+    <script src="./JS/diary.js"></script>
+</head>
+
+<html>
+
+<body class="container_12">
+    <div class="grid_2">&nbsp;</div>
+    <div class="grid_12">
+        <h1 id="text" style="height: 2em; color: ghostwhite;">四叶花颖的兴趣空间</h1>
+        <table>
+            <tr>
+                <td style="width: 60em; text-align: right; color: ghostwhite;">个人中心</td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <td rowspan="3"><img src="./CSS/image/head_Img/照片.JPG" height="130" width="130"></td>
+                <td style="height: 2em;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-size: x-large; color: ghostwhite;">四叶花颖</td>
+            </tr>
+            <tr>
+                <td style="width: 2em;">&nbsp;</td>
+                <td id="sort"><a href="我的主页.html">主页</a></td>
+                <td id="sort"><a onclick="diaryShow()">日志</a></td>
+                <td id="sort"><a href="#" onclick="Personal_file()">个人档</a></td>
+                <td id="sort"><a herf="#" onclick="more()" id="more">&nbsp;&nbsp;更多...</a></td>
+            </tr>
+        </table>
+        <div id="SHOW_1">
+            <div class="column_1">
+
+                <div id="menu_title3" class="menu_title" onclick="openMenu(this)">
+                    特别关注
+                    <div class="indicator" id="indicator3">^</div>
+                </div>
+                <div class="menu" id="menu3">
+                    <div class="item">
+                        <a href="#" onclick="idol_Show()">爱豆</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#" onclick="movie_Show()">影视</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#" onclick="text_Show()">阅读</a>
+                    </div>
+                </div>
+
+                <li class="menu_divider"></li>
+                
+                <div id="menu_title1" class="menu_title" onclick="openMenu(this)">
+                    我的兴趣
+                    <div class="indicator" id="indicator1">^</div>
+                </div>
+                <div class="menu" id="menu1">
+                    <div class="item">
+                        <a href="#" onclick="idol_Show()">爱豆</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#">舞蹈</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#">音乐</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#" onclick="movie_Show()">影视</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#">短视频</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#">心灵鸡汤</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#" onclick="read_Show()">阅读</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#">表演艺术</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#">其它</a>
+                    </div>
+                </div>
+            
+                <li class="menu_divider"></li>
+            
+                <div id="menu_title2" class="menu_title" onclick="openMenu(this)">
+                    我的日志
+                    <div class="indicator" id="indicator2">^</div>
+                </div>
+                <div class="menu" id="menu2">
+                    <div class="item">
+                        <a href="#">抒情</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#">学术</a>
+                    </div>
+                    <li class="item_divider"></li>
+                    <div class="item">
+                        <a href="#">纪念</a>
+                    </div>
+                </div>
+
+                <table id="term_1" style="padding: 2px; width: 100%;">
+                    <tr>
+                        <td id="sort" style="border-right: 1px solid; text-align: center; padding: 0px; width: 5em;">
+                            <span style="font-size: larger; height: 1.5em;">说说</span>
+                            <br>
+                            <span class="talk_num" style="height: 1.5em;">1</span>
+                        </td>
+                        <td id="sort" style="text-align: center; padding: 0px; width: 5em;">
+                            <span style="font-size: larger; height: 1.5em;">日志</span>  
+                            <br>
+                            <span class="talk_num" style="height: 1.5em;">1</span>
+                        </td>
+                    </tr>
+                </table>
+            
+            </div>
+            <div class="column_2">
+                <form id="talk_Form" class="talk_Form" action="个人中心.html" method="POST">
+                    <table>
+                        <tr>
+                            <td><textarea name="descript" id="descript" cols="90" rows="5" placeholder="说说今天的心情  (ｖ＾_＾)ｖ                                                                                          (◕ᴗ◕✿)"></textarea></td>
+                            <td><img src="./CSS/icon/拍照.png" style="width: 70px; height: 90px;"></td>
+                            <td><img src="./CSS/icon/locked.png" style="width: 70px; height: 85px;"></td>
+                        </tr>
+                        <tr>
+                            <td class="submit" colspan="3"><button type="button" class="css_button" onclick="add()">发表</button></td>
+                        </tr>
+                    </table>
+                </form>
+                <table class="talk_list" id="talk_list">
+                    <tr class="talk">
+                        <td id="talk" style="height: 10px;">
+                            <span class="title">四叶花颖</span>
+                            <span class="time">2021/12/25 11:29:00</span>
+                            <span class="icon-uniE900" onclick="concel(this)"></span>
+                            <P class="talk_con">今天天气很明媚！</P>
+                            <a><span class="icon-uniE9001" onclick="Leave_Message(this)"></span></a>
+                            <hr>
+                            <input id="leaveMess" disabled="disabled" value="" placeholder = "留下你的感受吧">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="column_3" id="project_1">
+                <table class="idol">
+                    <tr class="talk">
+                        <td id="talk">
+                            <span class="title">丽颖</span>
+                            <div class="photo">
+                                <img src="./CSS/image/赵丽颖/1.jpg">
+                                <img src="./CSS/image/赵丽颖/2.jpg">
+                                <img src="./CSS/image/赵丽颖/3.jpg">
+                                <img src="./CSS/image/赵丽颖/4.jpg">
+                                <img src="./CSS/image/赵丽颖/5.jpg">
+                                <img src="./CSS/image/赵丽颖/6.jpg">
+                                <img src="./CSS/image/赵丽颖/7.jpg">
+                                <img src="./CSS/image/赵丽颖/8.jpg">
+                            </div>
+                            <img class="thumbs-up" onclick="thumbs_up()" src="./CSS/icon/点赞.png">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="column_3" id="project_2">
+                <table class="talk_list" id="talk_list">
+                    <tr class="talk">
+                        <td id="talk">
+                            <span class="title">楚乔</span>
+                            <br>
+                            <video controls="controls">
+                                <source src="./CSS/video/楚乔.mp4" type="video/ogg" />
+                            </video>
+                            <br>
+                            <img class="thumbs-up" onclick="thumbs_up()" src="./CSS/icon/点赞.png">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="column_3" id="project_3">
+                <table class="talk_list" id="talk_list">
+                    <tr class="talk">
+                        <td id="text_read" style="padding: 10px;">
+                            <script id="read" type="text/html">
+                                <span class="title">{{text_Title}}</span>
+                                <span class="time">{{author}}</span>
+                                <br>
+                                <p>{{p1}}</p>
+                                <p>{{p2}}</p>    
+                                <p>{{p3}}</p> 
+                                <p>{{p4}}</p>
+                                <p>{{p5}}</p>    
+                                <p>{{p6}}</p> 
+                                <p>{{p7}}</p>
+                                <p>{{p8}}</p>    
+                                <p>{{p9}}</p> 
+                                <p>{{p10}}</p>
+                                <p>{{p11}}</p>    
+                                <p>{{p12}}</p> 
+                                <p>{{p13}}</p>
+                                <br>
+                                <img class="thumbs-up" onclick="thumbs_up()" src="./CSS/icon/点赞.png">
+                            </script>    
+                <script src="./JS/publish.js"></script>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <style>
+                .column_3 {
+                    display: none;
+                }
+            </style>
+        </div>
+        <div id="SHOW_2">
+            <iframe src="列表页.html"  frameborder="0" scrolling="auto" name="iframe_list"></iframe>
+        </div>
+        <div id="SHOW_3">
+            <iframe src="个人简历.html"  frameborder="0" scrolling="auto" name="iframe_list"></iframe>
+        </div>
+    </div>
+    <div class="grid_2">&nbsp;</div>
+</body>
+
+</html>
