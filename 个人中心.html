@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <head>
+    <!--屏蔽自己网站的Referrer-->
+    <meta name="referrer" content="no-referrer" />
     <title>My UF</title>
     <script src="./JS/template.js"></script>
     <style type="text/css">
@@ -10,20 +12,13 @@
         @import url("./CSS/css/total.css");
         @import url("./CSS/css/menu.css");
         @import url("./CSS/css/diary.css");
+
         #term_1 {
             float: left;
             display: none;
         }
-
-        .column_3 {
-            width: 100%;
-            height: 100%;
-            margin-left: 10px;
-            float: right;
-            display: none;
-        }
     </style>
-    <script>       
+    <script>
         function diaryShow() {
             document.getElementById("SHOW_1").style.display = "flex";
             document.getElementById("SHOW_2").style.display = "none";
@@ -31,23 +26,25 @@
             document.getElementById("menu_title1").style.display = "none";
             document.getElementById("menu_title2").style.display = "none";
             document.getElementById("menu_title3").style.display = "none";
-            var driver =  document.getElementsByClassName("menu_divider");
+            var driver = document.getElementsByClassName("menu_divider");
             var i;
-            for(i=0; i<driver.length; i++) {
+            for (i = 0; i < driver.length; i++) {
                 driver[i].style.display = "none";
             }
-            var menu =  document.getElementsByClassName("menu");
+            var menu = document.getElementsByClassName("menu");
             var i;
-            for(i=0; i<menu.length; i++) {
+            for (i = 0; i < menu.length; i++) {
                 menu[i].style.display = "none";
             }
-            document.getElementById("project_1").style.display = "none";
-            document.getElementById("project_2").style.display = "none";
-            document.getElementById("project_3").style.display = "none";
+            var pro = document.getElementsByClassName("project");
+            for (i = 1; i <= pro.length - 1; i++) {
+                document.getElementById("project_" + i.toString()).style.display = "none";
+            }
+            document.getElementById("project_error").style.display = "none";
             document.getElementById("term_1").style.display = "flex";
-            var column =  document.getElementsByClassName("column_2");
+            var column = document.getElementsByClassName("column_2");
             var i;
-            for(i=0; i<column.length; i++) {
+            for (i = 0; i < column.length; i++) {
                 column[i].style.display = "inline";
             }
         }
@@ -62,7 +59,9 @@
 <body class="container_12">
     <div class="grid_2">&nbsp;</div>
     <div class="grid_12">
-        <h1 id="text" style="height: 2em; color: ghostwhite;">四叶花颖的兴趣空间</h1>
+        <h1 id="text" style="height: 2em; color: ghostwhite;">
+            <script>document.write(getCookie());</script>的兴趣空间
+        </h1>
         <table>
             <tr>
                 <td style="width: 60em; text-align: right; color: ghostwhite;">个人中心</td>
@@ -75,7 +74,9 @@
                 <td style="height: 2em;">&nbsp;</td>
             </tr>
             <tr>
-                <td colspan="2" style="font-size: x-large; color: ghostwhite;">四叶花颖</td>
+                <td colspan="4" style="font-size: x-large; color: ghostwhite;">
+                    <script>document.write(getCookie());</script>
+                </td>
             </tr>
             <tr>
                 <td style="width: 2em;">&nbsp;</td>
@@ -94,79 +95,67 @@
                 </div>
                 <div class="menu" id="menu3">
                     <div class="item">
-                        <a href="#" onclick="idol_Show()">爱豆</a>
+                        <a href="#" onclick="project_Show(1)">爱豆</a>
                     </div>
                     <li class="item_divider"></li>
                     <div class="item">
-                        <a href="#" onclick="movie_Show()">影视</a>
+                        <a href="#" onclick="project_Show(2)">影视</a>
                     </div>
                     <li class="item_divider"></li>
                     <div class="item">
-                        <a href="#" onclick="text_Show()">阅读</a>
+                        <a href="#" onclick="project_Show(3)">阅读</a>
                     </div>
                 </div>
 
                 <li class="menu_divider"></li>
-                
+
                 <div id="menu_title1" class="menu_title" onclick="openMenu(this)">
                     我的兴趣
                     <div class="indicator" id="indicator1">^</div>
                 </div>
                 <div class="menu" id="menu1">
                     <div class="item">
-                        <a href="#" onclick="idol_Show()">爱豆</a>
+                        <a href="#" onclick="project_Show(1)">爱豆</a>
                     </div>
                     <li class="item_divider"></li>
                     <div class="item">
-                        <a href="#">舞蹈</a>
+                        <a href="#" onclick="error_Show()">舞蹈</a>
                     </div>
                     <li class="item_divider"></li>
                     <div class="item">
-                        <a href="#">音乐</a>
+                        <a href="#" onclick="project_Show(2)">影视</a>
                     </div>
                     <li class="item_divider"></li>
                     <div class="item">
-                        <a href="#" onclick="movie_Show()">影视</a>
+                        <a href="#" onclick="error_Show()">短视频</a>
                     </div>
                     <li class="item_divider"></li>
                     <div class="item">
-                        <a href="#">短视频</a>
+                        <a href="#" onclick="project_Show(3)">心灵鸡汤</a>
                     </div>
                     <li class="item_divider"></li>
                     <div class="item">
-                        <a href="#">心灵鸡汤</a>
-                    </div>
-                    <li class="item_divider"></li>
-                    <div class="item">
-                        <a href="#" onclick="read_Show()">阅读</a>
-                    </div>
-                    <li class="item_divider"></li>
-                    <div class="item">
-                        <a href="#">表演艺术</a>
-                    </div>
-                    <li class="item_divider"></li>
-                    <div class="item">
-                        <a href="#">其它</a>
+                        <a href="#" onclick="error_Show()">其它</a>
                     </div>
                 </div>
-            
+
                 <li class="menu_divider"></li>
-            
+
                 <div id="menu_title2" class="menu_title" onclick="openMenu(this)">
                     我的日志
                     <div class="indicator" id="indicator2">^</div>
                 </div>
                 <div class="menu" id="menu2">
                     <div class="item">
-                        <a href="#">抒情</a>
+                        <a href="#" onclick="error_Show()">抒情</a>
                     </div>
                     <li class="item_divider"></li>
                     <div class="item">
-                        <a href="#">学术</a>
+                        <a href="#" onclick="project_Show(4)">学术</a>
                     </div>
                     <li class="item_divider"></li>
                     <div class="item">
-                        <a href="#">纪念</a>
+                        <a href="#" onclick="error_Show()">纪念</a>
                     </div>
                 </div>
 
@@ -178,24 +167,27 @@
                             <span class="talk_num" style="height: 1.5em;">1</span>
                         </td>
                         <td id="sort" style="text-align: center; padding: 0px; width: 5em;">
-                            <span style="font-size: larger; height: 1.5em;">日志</span>  
+                            <span style="font-size: larger; height: 1.5em;">日志</span>
                             <br>
                             <span class="talk_num" style="height: 1.5em;">1</span>
                         </td>
                     </tr>
                 </table>
-            
+
             </div>
             <div class="column_2">
                 <form id="talk_Form" class="talk_Form" action="个人中心.html" method="POST">
                     <table>
                         <tr>
-                            <td><textarea name="descript" id="descript" cols="90" rows="5" placeholder="说说今天的心情  (ｖ＾_＾)ｖ                                                                                          (◕ᴗ◕✿)"></textarea></td>
+                            <td><textarea name="descript" id="descript" cols="90" rows="5"
+                                    placeholder="说说今天的心情  (ｖ＾_＾)ｖ                                                                                        (◕ᴗ◕✿)"></textarea>
+                            </td>
                             <td><img src="./CSS/icon/拍照.png" style="width: 70px; height: 90px;"></td>
                             <td><img src="./CSS/icon/locked.png" style="width: 70px; height: 85px;"></td>
                         </tr>
                         <tr>
-                            <td class="submit" colspan="3"><button type="button" class="css_button" onclick="add()">发表</button></td>
+                            <td class="submit" colspan="3"><button type="button" class="css_button"
+                                    onclick="add()">发表</button></td>
                         </tr>
                     </table>
                 </form>
@@ -215,7 +207,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="column_3" id="project_1">
+            <div class="project" id="project_1">
                 <table class="idol">
                     <tr class="talk">
                         <td id="talk">
@@ -235,14 +227,14 @@
                     </tr>
                 </table>
             </div>
-            <div class="column_3" id="project_2">
+            <div class="project" id="project_2">
                 <table class="talk_list" id="talk_list">
                     <tr class="talk">
                         <td id="talk">
                             <span class="title">楚乔</span>
                             <br>
-                            <video controls="controls">
-                                <source src="./CSS/video/楚乔.mp4" type="video/ogg" />
+                            <video mediatype="video" controls="controls"
+                                src="https://vd4.bdstatic.com/mda-kk9mhdbtj14s1sd4/sc/cae_h264_clips/1604992809/mda-kk9mhdbtj14s1sd4.mp4?">
                             </video>
                             <br>
                             <img class="thumbs-up" onclick="thumbs_up()" src="./CSS/icon/点赞.png">
@@ -250,46 +242,101 @@
                     </tr>
                 </table>
             </div>
-            <div class="column_3" id="project_3">
+            <div class="project" id="project_3">
                 <table class="talk_list" id="talk_list">
                     <tr class="talk">
                         <td id="text_read" style="padding: 10px;">
                             <script id="read" type="text/html">
-                                <span class="title">{{text_Title}}</span>
-                                <span class="time">{{author}}</span>
-                                <br>
-                                <p>{{p1}}</p>
-                                <p>{{p2}}</p>    
-                                <p>{{p3}}</p> 
-                                <p>{{p4}}</p>
-                                <p>{{p5}}</p>    
-                                <p>{{p6}}</p> 
-                                <p>{{p7}}</p>
-                                <p>{{p8}}</p>    
-                                <p>{{p9}}</p> 
-                                <p>{{p10}}</p>
-                                <p>{{p11}}</p>    
-                                <p>{{p12}}</p> 
-                                <p>{{p13}}</p>
-                                <br>
-                                <img class="thumbs-up" onclick="thumbs_up()" src="./CSS/icon/点赞.png">
-                            </script> 
+                                <article>
+                                    <!--文档或节规定页眉,应该被用作介绍性内容的容器。-->
+                                    <header>
+                                        <h2 style="text-align:center;"><em>{{text_Title}}</em></h2>
+                                    </header>
+                                    {{each paragraphs as value i}}
+                                    <p>{{value}}</p>
+                                    {{/each}}
+                                    <!--文档或节规定页脚，应该提供有关其包含元素的信息。-->
+                                    <!--页脚通常包含文档的作者、版权信息、使用条款链接、联系信息等等。-->
+                                    <footer>
+                                        <span style="font-weight: bold;">作者：</span>
+                                        <em>{{author}}</em>
+                                    </footer>
+                                    <hr>
+                                    <!--元素页面主内容之外的某些内容（比如侧栏）。内容应该与周围内容相关。-->
+                                    <aside>
+                                        <ol type="1">
+                                            {{each notes as value i}}
+                                            <li>{{value}}</li>
+                                            {{/each}}
+                                        </ol>
+                                    </aside>
+                                    <br>
+                                    <img class="thumbs-up" onclick="thumbs_up()" src="./CSS/icon/点赞.png">
+                                </article>
+                            </script>
                         </td>
                     </tr>
-                </table>   
+                </table>
+            </div>
+            <div class="project" id="project_4">
+                <table class="talk_list" id="talk_list">
+                    <tr class="talk">
+                        <td style="vertical-align: middle;">
+                            <div style="padding: 20px; padding-bottom: 40px;">
+                                <section>
+                                    <h2>计算机专业</h2>
+                                    <p>
+                                        计算机专业是指计算机硬件与软件相结合、面向系统、更偏向应用的宽口径专业。
+                                        通过基础教学与专业训练，培养基础知识扎实、知识面宽、工程实践能力强，
+                                        具有开拓创新意识，在计算机科学与技术领域从事科学研究、教育、开发和应用的高级人才。
+                                    </p>
+                                </section>
+                                <section>
+                                    <h2>ACM</h2>
+                                    <em>交换语句：</em><br>
+                                    <code>var a = 1,b = 2;</code>
+                                    <br>
+                                    <code>
+                                        a = a + b;
+                                        b = a - b;
+                                        a = a - b;
+                                    </code>
+                                    <br>
+                                    <br>
+                                    <em>交换之后：</em><br>
+                                    <code>
+                                        a = 2;
+                                        b = 1;
+                                    </code>
+                                </section>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
                 <script src="./JS/read_template.js"></script>
             </div>
+            <div class="project" id="project_error">
+                <table class="talk_list" id="talk_list">
+                    <tr class="talk">
+                        <td id="talk">
+                            <div style="width: 100%; height: 200px; text-align: center; vertical-align: middle;">
+                                <span style="font-size: xx-large; line-height: 200px;">暂时没有相关内容！</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <style>
-                .column_3 {
+                .project {
                     display: none;
                 }
             </style>
         </div>
         <div id="SHOW_2">
-            <iframe src="列表页.html"  frameborder="0" scrolling="auto" name="iframe_list"></iframe>
+            <iframe src="列表页.html" frameborder="0" scrolling="auto" name="iframe_list"></iframe>
         </div>
         <div id="SHOW_3">
-            <iframe src="个人简历.html"  frameborder="0" scrolling="auto" name="iframe_list"></iframe>
+            <iframe src="个人简历.html" frameborder="0" scrolling="auto" name="iframe_list"></iframe>
         </div>
     </div>
     <div class="grid_2">&nbsp;</div>

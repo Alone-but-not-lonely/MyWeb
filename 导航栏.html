@@ -17,7 +17,7 @@
             align-content: center;
         }
 
-        ul {
+        nav {
             margin-top: 0px;
         }
 
@@ -26,17 +26,17 @@
             list-style-type: none;
         }
 
-        li a {
+        nav a {
             text-decoration: none;
             padding: 17px 18px;
             /*链接文字可以占的空间大小*/
         }
 
-        li a:hover {
+        nav a:hover {
             background-color: lightblue;
             color: lightgray;
         }
-        
+
         #head_text {
             color: ghostwhite;
             font-size: larger;
@@ -74,41 +74,33 @@
 <html>
 
 <body class="flexBox">
-    <ul>
-        <li>
-            <img class="logo" src="./CSS/image/logo_Img/uf.jpg" style="width: 2em;height: 2em; border-radius: 100%;">
-            <span style="color: ghostwhite; font-size: 2em; font-weight: 300; vertical-align: middle;"><abbr
-                    title="Your Future 未来的你" style="text-decoration: none;">UF</abbr>空间</span>
-        </li>
-        <li><a href="个人中心.html" target="showframe"><img class="icon" src="./CSS/icon/个人.png"><span
-                    id="head_text">个人中心</span></a></li>
-        <li><a href="我的主页.html" target="showframe"><img class="icon" src="./CSS/icon/首页.png"><span
-                    id="head_text">我的主页</span></a></li>
-        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        </li>
-        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        </li>
-        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        </li>
-        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        </li>
-        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        </li>
-        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        </li>
-        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        </li>
-        <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        </li>
+    <!--定义导航链接集合。旨在定义大型的导航链接块。-->
+    <nav>
+        <img class="logo" src="./CSS/image/logo_Img/uf.jpg" style="width: 2em;height: 2em; border-radius: 100%;">
+        <span style="color: ghostwhite; font-size: 2em; font-weight: 300; vertical-align: middle;"><abbr
+                title="Your Future 未来的你" style="text-decoration: none;">UF</abbr>空间</span>
+        <a href="个人中心.html" target="showframe"><img class="icon" src="./CSS/icon/个人.png"><span
+                id="head_text">个人中心</span></a>
+        <a href="我的主页.html" target="showframe"><img class="icon" src="./CSS/icon/首页.png"><span
+                id="head_text">我的主页</span></a>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <li class="bgm"><img id="bgm_css" src="./CSS/icon/五线谱_bg.png" onclick="musicShow()"></li>
-        <li><div id="box" style="font-size: small; vertical-align: bottom; opacity: 0.7;">↖点击</div></li>
-        
         <li>
-            <button onclick="OUT(this)"  style="background-color:lightskyblue; border: 1px solid black; border-radius: 5px; vertical-align: bottom;">登出</button>
+            <div id="box" style="font-size: small; vertical-align: bottom; opacity: 0.7;">↖点击</div>
         </li>
-        <li><span style="width: 20em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+        <li>
+            <button onclick="OUT(this)"
+                style="background-color:lightskyblue; border: 1px solid black; border-radius: 5px; vertical-align: bottom;">登出</button>
         </li>
-    </ul>
+    </nav>
 </body>
 
 </html>

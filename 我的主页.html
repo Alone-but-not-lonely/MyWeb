@@ -29,7 +29,9 @@
 <body class="container_12">
     <div class="grid_2">&nbsp;</div>
     <div class="grid_12">
-        <h1 id="text" style="height: 2em; color: ghostwhite;">四叶花颖的兴趣空间</h1>
+        <h1 id="text" style="height: 2em; color: ghostwhite;">
+            <script>document.write(getCookie());</script>的兴趣空间
+        </h1>
         <table>
             <tr>
                 <td style="width: 60em; text-align: right; color: ghostwhite;">我的主页</td>
@@ -42,7 +44,9 @@
                 <td style="height: 2em;">&nbsp;</td>
             </tr>
             <tr>
-                <td colspan="2" style="font-size: x-large; color: ghostwhite;">四叶花颖</td>
+                <td colspan="2" style="font-size: x-large; color: ghostwhite;">
+                    <script>document.write(getCookie());</script>
+                </td>
             </tr>
             <tr>
                 <td style="width: 2em;">&nbsp;</td>
@@ -61,7 +65,7 @@
                             <span class="talk_num" style="height: 1.5em;">1</span>
                         </td>
                         <td id="sort" style="text-align: center; padding: 0px; width: 5em;">
-                            <span style="font-size: larger; height: 1.5em;">日志</span>  
+                            <span style="font-size: larger; height: 1.5em;">日志</span>
                             <br>
                             <span class="talk_num" style="height: 1.5em;">1</span>
                         </td>
@@ -82,14 +86,17 @@
             </div>
             <div class="column_2">
                 <form id="talk_Form" class="talk_Form" action="个人中心.html" method="POST">
-                    <table>
+                    <table style="max-width: 100%; max-height: 100%;">
                         <tr>
-                            <td><textarea name="descript" id="descript" cols="90" rows="5" placeholder="说说今天的心情  (ｖ＾_＾)ｖ                                                                                          (◕ᴗ◕✿)"></textarea></td>
+                            <td><textarea name="descript" id="descript" cols="90" rows="5"
+                                    placeholder="说说今天的心情  (ｖ＾_＾)ｖ                                                                                        (◕ᴗ◕✿)"></textarea>
+                            </td>
                             <td><img src="./CSS/icon/拍照.png" style="width: 70px; height: 90px;"></td>
                             <td><img src="./CSS/icon/locked.png" style="width: 70px; height: 85px;"></td>
                         </tr>
                         <tr>
-                            <td class="submit" colspan="3"><button type="button" class="css_button" onclick="add()">发表</button></td>
+                            <td class="submit" colspan="3"><button type="button" class="css_button"
+                                    onclick="add()">发表</button></td>
                         </tr>
                     </table>
                 </form>
@@ -112,10 +119,10 @@
             </div>
         </div>
         <div id="SHOW_2">
-            <iframe src="列表页.html"  frameborder="0" scrolling="auto" name="iframe_list"></iframe>
+            <iframe src="列表页.html" frameborder="0" scrolling="auto" name="iframe_list"></iframe>
         </div>
         <div id="SHOW_3">
-            <iframe src="个人简历.html"  frameborder="0" scrolling="auto" name="iframe_list"></iframe>
+            <iframe src="个人简历.html" frameborder="0" scrolling="auto" name="iframe_list"></iframe>
         </div>
     </div>
     <div class="grid_2">&nbsp;</div>

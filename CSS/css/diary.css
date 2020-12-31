@@ -40,6 +40,8 @@
 .title {
     font-size: x-large;
     font-weight: bolder;
+    width: 5em;
+    display: inline-block;
 }
 
 .time {

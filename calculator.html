@@ -9,22 +9,24 @@
 	<script type="text/javascript" src="./JS/calculator.js"></script>
 	<style>
 		@import url("./CSS/css/diary.css");
+
 		.button {
 			width: 100%;
 			display: contents;
-            position: relative; 
-        }
-        .css_button {
-            position: absolute;
+			position: relative;
+		}
+
+		.css_button {
+			position: absolute;
 			left: 94%;
-        }
+		}
 	</style>
 </head>
 
 <body>
 	<div class="button">
-        <button class="css_button" onclick="window.history.go(-1)">返回</button>
-    </div>
+		<button class="css_button" onclick="window.history.go(-1)">返回</button>
+	</div>
 	<br><br><br><br>
 	<div id="calcuator">
 		<input type="text" id="input-box" value="0" size="21" maxlength="21" readonly="readonly" />
@@ -53,7 +55,7 @@
 			<div onclick="operator('result')" class=" btn-70 btn-radius color-red font-14">=</div>
 		</div>
 	</div>
-	
+
 </body>
 
 </html>

@@ -16,6 +16,18 @@
     float: right;
 }
 
+.project {
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    float: right;
+    display: none;
+}
+
+.project .talk_list {
+    margin-top: 0;
+}
+
 #term_1 {
     width:15%;
     height: 60px;
@@ -45,6 +57,25 @@ p {
     text-align:left;
     text-indent:2em;
     padding-bottom:10px;
+}
+
+/*
+    list-style-position:inside; 可以指定编号的位置（默认为outside）
+    counter-reset属性第二个值的默认值为0，表示初始值为0；
+    counter-increment属性第二个值的默认值为1，表示增量为1。
+*/
+ol {
+    list-style-type: none;
+    counter-reset: li;
+}
+ol li {
+    border: none;
+    background-color: white;
+    list-style-position: inside;
+}
+ol li:before {
+    content: '(' counter(li) ') ';
+    counter-increment: li;
 }
 
 ul {
@@ -85,6 +116,10 @@ li {
     border: none;
     text-align: center;
     vertical-align: middle;
+}
+
+footer {
+    margin-left: 85%;
 }
 
 .thumbs-up {

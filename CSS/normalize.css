@@ -32,11 +32,12 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
-    font-family: "webfont" !important;
+    font-family: "webfont","Times New Roman",sans-serif,Georgia !important;
 }
 
 @font-face {
     font-family: 'webfont';
+    font-size: xx-large;
     font-display: swap;
     src: url('./font/X-千纸鹤\(非商用\)_©字体视界/X-千纸鹤(非商用)_©字体视界.ttf') format('truetype');
     /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
@@ -438,3 +439,28 @@ template {
 [hidden] {
     display: none;
 }
+
+/*iPhone5*/
+@media screen and (max-device-width: 320px) {
+    html {
+        font-size: 12px;
+    }
+}  
+/*iPad Mini*/
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) {  
+    html {
+        font-size: 14.5px;
+    }
+} 
+/*iPad 3 横向*/
+@media (max-device-width: 1024px) {   
+    html {
+        font-size: 16px;
+    }
+}  
+/*iPad 3 竖向*/
+@media (max-device-width: 768px) and (orientation: portrait) {   
+    html {
+        font-size: 16px;
+    }
+}  
