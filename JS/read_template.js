@@ -19,15 +19,14 @@ const data = {
     '妖童媛女：俊俏的少年和美丽的少女。妖，艳丽。媛，女子。',
     '羽杯：古代饮酒用的耳杯。又称羽觞、耳杯。',
     '迁延顾步：形容走走退退不住回视自己动作的样子，有顾影自怜之意。',
-    '敛裾（jū）：这里是提着衣襟的意思。裾，衣襟。']
-}
-const html = template('read', data)
-document.getElementById('text_read').innerHTML = html
-
-const mode = {
+    '敛裾（jū）：这里是提着衣襟的意思。裾，衣襟。'],
   title: userName,
   time: '2021/12/25 11:29:00',
   content: '今天天气很明媚！'
 }
-const html_mode = template('diary', mode)
+
+const html = template('read', data)
+document.getElementById('text_read').innerHTML = html
+
+const html_mode = template('diary', data)
 document.getElementById('talk').innerHTML = html_mode
