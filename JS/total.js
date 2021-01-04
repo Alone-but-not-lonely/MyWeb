@@ -85,12 +85,8 @@ function project_Show (id) {
   document.getElementById('project_error').style.display = 'none'
 }
 
-function thumbs_up () {
-  const thumbs = document.getElementsByClassName('thumbs-up')
-  let i
-  for (i = 0; i < thumbs.length; i++) {
-    if (thumbs[i].getAttribute('src', 2) === './CSS/icon/点赞.png') { thumbs[i].src = './CSS/icon/点赞后.png' } else { thumbs[i].src = './CSS/icon/点赞.png' }
-  }
+function thumbs_up (obj) {
+  if (obj.getAttribute('src', 2) === './CSS/icon/thumbs-up.png') { obj.src = './CSS/icon/after-thumbs-up.png' } else { obj.src = './CSS/icon/thumbs-up.png' }
 }
 
 // document.cookie="username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
@@ -143,7 +139,7 @@ function loginCheck () {
     const now = new Date()
     now.setDate(now.getDate() + 1)
     setCookie(nickname, login, now)
-    window.location = '框架.html'
+    window.location = 'frame.html'
   }
 }
 
@@ -151,7 +147,7 @@ function userlogin () {
   const login = getCookie()
   if (login !== null && login !== '') {
     alert('欢迎 "' + login + '" !')
-    window.location = '框架.html'
+    window.location = 'frame.html'
   }
 }
 

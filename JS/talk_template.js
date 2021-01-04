@@ -1,6 +1,6 @@
 const mode = {
   title: userName,
-  time: '2021/12/25 11:29:00',
+  time: '2020/12/25 11:29:00',
   content: '今天天气很明媚！'
 }
 const html_my = template('diary', mode)

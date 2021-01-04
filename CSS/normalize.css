@@ -24,7 +24,7 @@ html {
 
 body {
     margin: 0;
-    background-image: url("./image/bg_Img/静态/古风美男.jpg");
+    background-image: url("./image/bg_Img/static/beautifulMan.jpg");
     background-position: center;
     background-size: cover;
     -webkit-background-size: cover;
@@ -39,7 +39,7 @@ body {
     font-family: 'webfont';
     font-size: xx-large;
     font-display: swap;
-    src: url('./font/X-千纸鹤\(非商用\)_©字体视界/X-千纸鹤(非商用)_©字体视界.ttf') format('truetype');
+    src: url('./font/X-千纸鹤\(非商用\)_字体视界/X-千纸鹤(非商用)_字体视界.ttf') format('truetype');
     /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
 }
 
