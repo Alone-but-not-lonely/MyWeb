@@ -443,13 +443,10 @@ template {
 /*iPhone5*/
 @media screen and (max-device-width: 320px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
-}  
-/*iPad Mini*/
-@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) {  
-    html {
-        font-size: 14.5px;
+    .grid_2 {
+        display: none;
     }
 } 
 /*iPad 3 横向*/
@@ -457,10 +454,16 @@ template {
     html {
         font-size: 16px;
     }
+    .grid_2 {
+        display: none;
+    }
 }  
 /*iPad 3 竖向*/
 @media (max-device-width: 768px) and (orientation: portrait) {   
     html {
         font-size: 16px;
+    }
+    .grid_2 {
+        display: none;
     }
 }  
